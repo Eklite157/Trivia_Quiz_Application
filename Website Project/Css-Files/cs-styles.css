@@ -1,0 +1,77 @@
+/* styles.css */
+header {
+    background-image: url('../Images/cs.jpg'); /* Add path to your image */
+    background-size: cover; /* Makes sure the image covers the entire header area */
+    background-position: center center; /* Center the image in the header */
+    color: white; 
+    text-align: center;
+    padding: 60px 20px; /* Add padding to make the header taller */
+    background-attachment: fixed; /* Fixes the background image when scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add a shadow to the header */
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* preferred font, fallback font*/
+    background-color: #8292a3;
+    margin: 0; /*controls the space around an element (i.e removes all external spacing (margins) around an element)*/ 
+    padding: 0;/*controls the space inside an element, between the element's content and its border. (i.e The text would touch the edges of the <div>.)*/
+    color: #333;
+    padding-left:40px;
+}
+
+.project-link{
+    background-color:#c599d9;
+    width:100px;
+    border-radius:10px;
+    padding:10px;
+    text-align:center;
+    border-style:solid;
+    border-width:2px;
+    border-color:rgb(148, 11, 169);
+}
+
+
+.inspiration {
+    padding: 10px;
+    margin-top:40px;
+    margin-bottom:40px;
+    max-width: 900px;
+    background-color: #c599d9;
+    line-height:1.8;
+    border-radius: 10px;
+    border-color:rgb(148, 11, 169);
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inspiration h2{
+    color:rgb(148, 11, 169)
+}
+
+.process h3{
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+.process p{
+    text-indent: 30px;  /* Indent the first line of the paragraph by 30px */
+    width: 80%;  /* Limit the width of the paragraph to 50% of its container */
+    line-height: 1.8;
+}
+
+.features{
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 10px;
+}

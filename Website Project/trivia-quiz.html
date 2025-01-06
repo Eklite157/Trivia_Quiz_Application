@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <link rel="stylesheet" href="Css-Files/cs-styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>A Trivia Quiz</h1>
+        <h2>Python, Tkinter, Pandas</h2>
+    </header>
+
+<section>
+    <div class="inspiration">
+        <h2>Inspiration</h2>
+        <p> During high school, whenever I found myself getting bored in economics lectures, I would always switch tabs to 
+            Jetpunk where I would proceed to simultaneously memorize and learn the countries of the world. Once that 
+            became repetitive, I started quizzing myself on world capitals, world flags, and the provinces of various 
+            countries. To quote an Instagram reel I saw, perhaps that's why no one knew me in grade 9, but after learning 
+            Python, I thought to make use of this inexplicable hobby of mine and build my own Trivia Quiz application that
+            can continue to train me in what is evidently extremely useful and life-saving knowledge (:D) as well as teach me the 
+            capitals I haven't learned yet. While I could continue to use Jetpunk, using my own application would give 
+            me additional satisfaction and amusement, and I would also learn some of the behind-the-scenes workings of 
+            those quizzes I enjoy so much. </p>
+    </div>
+
+    <div class="project-link">
+    <a href='https://github.com/Eklite157/Projects/tree/main/Trivia%20Project' target="_blank">Project Link</a>
+    </div>
+
+    <div class="process">
+        <h3>The Beginning: Tkinter Library</h3>
+            <p> I started learning Python on my own during the fall semester at Waterloo. While I had a grasp on the fundamentals, I was still a ways off
+                from building actual user-interactive applications, and it was evident to me that there was a conspicuous gap between my skillset and the programs
+                I came across in the real world. This was what led me to learn about what GUI applications were during the building process, and how I could integrate these concepts
+                into Python code. I chose to employ Tkinter and explored its capabilities such as creating interactive buttons and windows.</p>
+
+        <h3>Using an Excel Spreadsheet and Pandas Library</h3> 
+            <p>I also quickly realized that I didn't want to manually embed every question into my code, and wanted more flexibility with
+                how the questions were generated, so I learned how to create and format an Excel spreadsheet to store all the questions in a way
+                that was accessible for Python, which was possible after learning about the pandas library and the dataframe structure. However,
+                a problem that arose was that my Python file and the Excel spreadsheet were stored in a separate folder on my Desktop instead of in my computer's main directory,
+                and therefore, they were "inaccessible." The notion of computer directories was also something new that I had to contend with, and I eventually solved this problem
+                by using the Pathlib library in my Python code to redirect the main-directory to the parent folder every time the program is run, so that the Python file
+                and the excel question bank would share the same directory and become accessible.</p>
+
+        <h3>Additional Adjustments</h3>  
+            <p> After having a working program, I wanted to challenge myself further and decided I wanted to branch out from just a single set of geographical questions;
+                I wanted add various selectable categories with their designated set of questions. I did so by adding another column on the Excel spreadsheet, which would
+                provide the category of each question. Then by extracting every unique element in the 'Category' column into a list, I would have my categories to display.
+                After a category is selected, the set of questions generated would be the employment of the to_dict method along with the orient='records' option in pandas,
+                which would convert each row of the dataframe into a list of dictionaries (key=column name and value=value in the row). Then like before, the imported random 
+                library's shuffle function would shuffle each object in this list to display. 
+                
+            <p>I also remembered how previous quizzes I'd taken also included prompts (i.e ‘would you like to retake the quiz?’ or ‘are
+                you sure you would like to exit?') and feedback (‘correct’, ‘incorrect’, Your score is...’) in consideration of the user's preferences,
+                so I also proceeded to create functions that would perform those actions. </p>
+
+            <p> Then I tried to import a background using the built in capabilities in the Tkinter, but I learned that Tkinter itself does not support a background image property,
+                so I researched and learned about the canvas widget in Tkinter and the Image/ImageTk features in the Pillow library. These allowed more extensive customizations
+                that did the job. Furthermore, I learned about how ttk widgets often allowed a more consistent interface than tk widgets, which inspired me to also add hover effects 
+                to the buttons by importing ttk as well. This project not only taught me so many previously foreign concepts and led me into a world with so much more possibility,
+                but I also had to practice my ability to troubleshoot, as there were many times when the program functioned erratically and I had to figure out what was wrong with
+                the code or logic. As a first project, it was quite challenging for me to work my way around, but now that it's over, I feel I've grown and gained a remarkable amount
+                of knowledge in this short span of time. It has made me quite eager to tackle new challenges as learning opportunities.</p>
+
+    </div>
+
+    <div class="features">
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Category Selection</strong></li>
+            <p> User may select from a list of categories, displayed as buttons. Each category would provide a different set of questions.</p>
+
+            <li><strong>Constant Exit Button</strong></li>
+            <p> In case the user would like to leave before finishing all the questions, there is always an exit button present in both the category selection
+                and the question windows.</p>
+
+            <li><strong>Confirmation section</strong></li>
+            <p>In case a user clicks the exit button by accident, a confirmation window will show, confirming if they would like to leave. 
+                Clicking 'yes' would toggle to a 'Retake Quiz?' window whereas 'no' would resume the quiz from where they left off. </p>
+
+            <li><strong>Retake Option</strong></li>
+            <p>Once the quiz ends, there is an option to retake the quiz. Clicking 'yes' would restart the quiz whereas 'no' would end the quiz and the window will close. </p>
+        </p>
+
+            <li><strong>Scorekeeping</strong></li>
+            <p>For every question that is correct, one pont would be added to a tally. The final score would show once the user ends the quiz.</p>
+
+
+            <li><strong>Hover Animation</strong></li>
+            <p> The button color would change upon the cursor, to make the user better aware of their action.</p>
+
+        </ul>
+    </div>
+
+
+</section>
+
+</body>
+
+</html>
+

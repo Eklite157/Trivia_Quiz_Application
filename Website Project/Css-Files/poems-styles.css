@@ -1,0 +1,141 @@
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-image: url('../Images/chinese-poetry.jpg'); /* Add path to your image */
+    background-size: cover; /* Makes sure the image covers the entire header area */
+    background-position: center center; /* Center the image in the header */
+    /*background-position: horizontal-position vertical-position;*/
+    /*the image's middle point will align with the middle of the element's width or height*/
+    color: black; /* Text color on top of the image */
+    text-align: center;
+    padding: 60px 20px; /* Add padding to make the header taller */
+    background-attachment: fixed; /* Fixes the background image when scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add a shadow to the header */
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif; /* preferred font, fallback font*/
+    background-color: #C7BCA8;
+    margin: 0; /*controls the space around an element (i.e removes all external spacing (margins) around an element)*/ 
+    padding: 0;/*controls the space inside an element, between the element's content and its border. (i.e The text would touch the edges of the <div>.)*/
+    color: #333;/*text color of an element*/
+}
+
+h1 {
+    font-size: 2.5em; /* will be 2.5 times the font size of the parent (h1 element)*/
+    margin: 0;
+}
+ 
+h2 {
+    font-size: 1.8em;
+    color:  #000000;
+}
+
+
+.toc-container{
+    padding: 20px;
+    margin: 20px auto; /*auto centers the container*/
+    max-width: 500px;
+    text-align:center;
+    border-style: solid;
+    background-color:#D5C9B2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toc {
+    list-style-type: disc; /*default bullet points*/
+    list-style-position: inside;/* Bullets inside the list item */
+    text-align:left;
+    margin: 0;
+}
+
+.toc a {
+    text-decoration: none; /* Remove the underline from the links */
+    color: blue; /* Default link color */
+    display: inline-block; /* Make sure the entire text is clickable */
+    padding: 5px 10px; /* Add some padding around the text */
+    transition: color 0.3s ease; /* Smooth transition when color changes */
+    cursor: pointer; /*Changes the mouse ursor to a hand pointer when hovering*/
+}
+
+.toc a:hover{
+    color:darkblue;
+}
+
+/* Scroll to Top Button */
+/* # symbol is used to target an element by its ID in CSS.*/
+#scrollToTopBtn {
+    position: fixed;/*stay in the same position*/
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white; /*Color of the ↑ symbol*/
+    border: none;
+    border-radius: 50%; /*Creates a rather circular button*/
+    padding: 15px; /*Add more space from border*/
+    font-size: 24px; /*Size of the ↑ symbol*/
+    cursor: pointer; /*Changes the mouse ursor to a hand pointer when hovering*/
+    display: none; /* Initially hidden by default*/
+    z-index: 100; /* Make sure it's on top of other content */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+
+section {
+    padding: 20px;
+    margin:20px auto;
+    max-width: 900px;
+    background-color: #D5C9B2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.poem-text p, .poem-translation p, .table p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /*collapses all the text borders into a single border*/
+    margin-top: 20px;
+}
+
+/*The border shorthand property allows you to define the following three components for an element's border:
+
+Border width (1px in this case)
+Border style (solid in this case)
+Border color (#D5C9B2 in this case, which is a light tan color)*/
+
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Set column widths */
+th:nth-child(1), td:nth-child(1) {
+    width: 200px; /* First column */
+}
+
+th:nth-child(2){
+    text-align: center; 
+}
+
+td {
+    font-size: 1.1em;
+}
+
