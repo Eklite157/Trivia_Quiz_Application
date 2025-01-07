@@ -8,7 +8,7 @@ A Python-based trivia game using Tkinter for the GUI, pandas for question manage
 - pandas
 
 ## Features
-- **Category Selection**
+- **Category Selection**  
   User may select from a list of categories, displayed as buttons. Each category would provide a different set of questions.
 
 - **Constant Exit Button**
